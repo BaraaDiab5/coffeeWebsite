@@ -67,6 +67,17 @@ header{
     justify-content: space-between;
     color: var(--white);
 }
+@media (max-width:450px) {
+    #Gallery .cards{
+        padding: 15px !important ;
+    }
+    #Menu {
+        padding: 0px !important;
+    }
+    #Menu .cards{
+        padding: 20px !important;
+    }
+}
 @media (max-width:500px) {
     #Testimonials .Testimonial-content .fa-solid{
         display: none;
@@ -82,11 +93,6 @@ header{
         width: calc((100% - 30px) / 2);
     }
 }
-@media (min-width:901px){
-    #Testimonials .Testimonial-content .content-img .user-card {
-        width: calc((100% - 60px) / 3);
-    }
-}
 @media (max-width:900px) {
     .iconList{
         display: block;
@@ -100,7 +106,7 @@ header{
     #Home,
     #About{
         height: auto;
-        padding:85px 40px ;
+        padding:85px 20px ;
     }
     #Home .containerHome,
     #About .containerAbout{
@@ -108,6 +114,18 @@ header{
         flex-direction: column-reverse;
         gap: 50px;
         align-items: center; 
+    }
+    #Home .containerHome .part1 h3,
+    #Home .containerHome .part1 p {
+        max-width: 100% !important;
+        text-align: center;
+    }
+    #About .containerAbout .part2 {
+        width: 100% !important;
+    }
+    #About .containerAbout .part2 p {
+        font-size: var(--font-n) !important;
+        line-height: 1.7;   
     }
     #Contact .contact-content .second {
         order: -1; 
@@ -146,6 +164,17 @@ header{
     #About .containerAbout .part1 img{
         width: 400px;
         height: 400px;
+    }
+    #Menu .cards{
+        gap: 100px !important;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+    }
+    #Testimonials .Testimonial-content .content-img .user-card {
+        width: calc((100% - 60px) / 3);
+    }
+    #Gallery .cards{
+        gap: 40px !important;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
     }
 }
 .nav-menu ul{
@@ -306,7 +335,7 @@ header{
 #Menu .cards{
     display: grid; 
     gap: 100px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     padding: 60px;
 }
 #Menu .cards img{
@@ -414,8 +443,8 @@ header{
 }
 #Gallery .cards{
     display: grid; 
-    gap: 40px;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     padding: 60px;
 }
 #Gallery .cards .card-content{
